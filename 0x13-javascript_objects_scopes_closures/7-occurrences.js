@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/*function that calcul the number of occurences*/
+/* function that calcul the number of occurences */
 exports.nbOccurences = function (list, searchElement) {
   let count = 0;
   let i;

@@ -8,12 +8,12 @@ const occurrencesById = {};
 // Iterate through the original dictionary
 for (const userId in dict) {
   const occurrences = dict[userId];
-  
+
   // If the occurrences count is not already a key in the new dictionary, create it
   if (!occurrencesById[occurrences]) {
     occurrencesById[occurrences] = [];
   }
-  
+
   // Add the user ID to the corresponding occurrences key
   occurrencesById[occurrences].push(userId);
 }
