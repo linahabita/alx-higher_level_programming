@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-import urllib.request
+"""this module is for fectching a  specific url"""
 
-url = 'https://alx-intranet.hbtn.io/status'
+if __name__ == '__main__':
+    import urllib.request
 
-with urllib.request.urlopen(url) as response:
-    body = response.read()
-
-print("Body response:")
-print(f"\t- type: {type(body)}")
-print(f"\t- content: {body}")
-print(f"\t- utf8 content: {body.decode('utf-8')}")
-
+    url = 'https://alx-intranet.hbtn.io/status'
+    with urllib.request.urlopen(url) as response:
+        resp = response.read()
+        decoded_resp = resp.decode('utf-8')
+        print("Body response:")
+        print(f"\t- type: {type(resp)}")
+        print(f"\t- content: {resp}")
+        print(f"\t- utf8 content: {decoded_resp}")
